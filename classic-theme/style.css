@@ -73,3 +73,11 @@ main {
 .post {
   margin-bottom: 36px;
 }
+
+.error {
+  text-align: center;
+}
+
+.page-title {
+  text-align: center;
+}

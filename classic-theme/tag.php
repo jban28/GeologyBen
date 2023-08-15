@@ -7,12 +7,11 @@
     <script src="https://kit.fontawesome.com/5148556b44.js" crossorigin="anonymous"></script>
     <?php wp_head(); ?>
   </head>
-  <body>
-  
+  <body>  
     <?php wp_body_open(); ?>
-    <?php get_header() ?>
-
+    <?php get_header()?>
     <main>
+      <h1 class="page-title"><i class="fa-solid fa-tag"></i> <?php echo single_tag_title()?></h1>
       <?php
       if ( have_posts() ) {
         while ( have_posts() ) {
@@ -33,7 +32,6 @@
           echo get_the_date();
           ?>
       </h3>
-
       <?php
           $postcats = get_the_category();
           if ($postcats) { 
@@ -55,29 +53,6 @@
       <?php 
           } 
       ?>
-
-      <?php
-          $posttags = get_the_tags();
-          if ($posttags) { 
-      ?>
-      <h5>
-        <i class="fa-solid fa-tag"></i>
-      <?php
-            $firsttag = true;
-            foreach($posttags as $tag) {
-              if (!$firsttag) {
-                echo ', ';
-              }
-              else {$firsttag = false;}
-              ?>
-        <a href=<?php echo get_tag_link($tag->term_id);?>><?php echo $tag->name;?></a>
-              <?php
-              }
-      ?>
-      </h5>
-      <?php 
-          }
-      ?>
       <p>
       <?php echo get_the_excerpt();?>
       </p>
@@ -88,4 +63,4 @@
       ?>
     </main>
   </body>
-</html
+</html>

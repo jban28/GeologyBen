@@ -6,12 +6,11 @@
     <link rel="stylesheet" href="<?php echo esc_url( get_stylesheet_uri() ); ?>" type="text/css" />
     <?php wp_head(); ?>
   </head>
-  <body>
+  <body>  
     <?php wp_body_open(); ?>
-    <?php get_header() ?>
+    <?php get_header()?>
     <main>
-      <h1><?php the_title()?></h1>
-    <?php the_content(); ?>
+      <div class="error">Error 404. Page not found. <a href="/">Return to home</a></div>
     </main>
   </body>
 </html>
