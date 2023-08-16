@@ -10,8 +10,13 @@
     <?php wp_body_open(); ?>
     <?php get_header() ?>
     <main>
-      <h1><?php the_title()?></h1>
-    <?php the_content(); ?>
+      <?php get_template_part('template-parts/post-full');
+      	// If comments are open or there is at least one comment, load up the comment template.
+        if ( comments_open() || get_comments_number() ) {
+          comments_template();
+        }
+      ?>
+
     </main>
   </body>
 </html>

@@ -13,6 +13,7 @@ main {
   margin: auto;
   max-width: 700px;
   padding: 0px 24px;
+  box-sizing: border-box;
 }
 
 .header-bar {
@@ -29,6 +30,7 @@ main {
   position: sticky;
   position: -webkit-sticky;
   top: 0px;
+  z-index: 10;
 }
 
 .site-title {
@@ -80,4 +82,94 @@ main {
 
 .page-title {
   text-align: center;
+}
+
+.post-title {
+  margin-bottom: 12px;
+}
+
+.post-title a {
+  color: black;
+  text-decoration: none;
+}
+
+.post-title a:hover {
+  text-decoration: underline;
+}
+
+.post-date {
+  font-size: small;
+  margin: 12px 0px;
+}
+
+.post-cats {
+  font-size: small;
+  margin: 12px 0px;
+}
+
+.post-cats a {
+  text-decoration: none; 
+}
+
+.post-tags {
+  margin: 12px 0px;
+}
+
+.post-tags a {
+  color: black;
+  font-size: small;
+}
+
+.comment-list {
+  padding: 0px;
+  list-style-type: none;
+}
+
+.comment-list .children {
+	list-style: none;
+  padding-left: 24px;
+}
+
+.comment {
+  margin-bottom: 36px;
+}
+
+.comment-body > p {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+.avatar {
+  position: absolute;
+}
+
+.comment-author {
+  margin-bottom: 25px;
+}
+
+.fn,
+.comment-meta {
+  margin-left: 50px;
+  position: absolute;
+}
+
+.comment-meta {
+  margin-top: -25px;
+}
+
+.reply {
+  margin-bottom: 12px;
+}
+
+label {
+  display: block;
+}
+
+#comment {
+  width: 100%;
+}
+
+label[for="wp-comment-cookies-consent"] {
+  display: inline;
+  width: auto;
 }

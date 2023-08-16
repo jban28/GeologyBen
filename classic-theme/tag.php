@@ -16,48 +16,7 @@
       if ( have_posts() ) {
         while ( have_posts() ) {
           the_post(); 
-      ?>
-      <div class="post">
-      <h2>
-        <a href=<?php echo get_permalink();?>>
-      <?php
-          echo get_the_title();
-      ?>
-      </a>
-      </h2>
-
-      <h3>
-        <i class="fa-regular fa-calendar"></i> 
-          <?php 
-          echo get_the_date();
-          ?>
-      </h3>
-      <?php
-          $postcats = get_the_category();
-          if ($postcats) { 
-      ?>
-      <h4>
-      <?php
-            $firstcat = true;
-            foreach($postcats as $cat) {
-              if (!$firstcat) {
-                echo '&nbsp';
-              }
-              else {$firstcat = false;}
-      ?>
-        <a href=<?php echo get_category_link($cat->term_id);?>><span class="category"><?php echo $cat->name;?></span></a>
-      <?php
-              }
-      ?>
-      </h4>
-      <?php 
-          } 
-      ?>
-      <p>
-      <?php echo get_the_excerpt();?>
-      </p>
-      </div>
-      <?php
+          get_template_part('template-parts/post-summary');
         }
       }
       ?>
